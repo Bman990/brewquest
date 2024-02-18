@@ -8,6 +8,10 @@ height: 100vh;
 overflow: hidden;
 }
 
+::-webkit-scrollbar{
+    width: 0;
+}
+
 .homeContentDiv1{
     display: flex;
     width: 100%;
@@ -50,6 +54,7 @@ overflow: hidden;
     z-index: 2;
     display: flex;
     flex-direction: column;
+    margin-top: 5em;
 }
 
 
@@ -65,6 +70,7 @@ overflow: hidden;
     margin-bottom: 1em;
     color: white;
     font-family: "Roboto", sans-serif;
+    align-self: center;
 }
 
 .input1Style{
@@ -74,6 +80,7 @@ overflow: hidden;
     border-radius: 5px;
     margin-bottom: 1em;
     font-family: "Roboto", sans-serif;
+    align-self: center;
 }
 
 .submitBtnStyle{
@@ -84,6 +91,8 @@ overflow: hidden;
     width: max-content;
     padding: 0.3em 0.5em 0.3em 0.5em;
     font-family: "Roboto", sans-serif;
+    border-radius: 0.2em;
+    outline: none;
 } 
 
 .submitBtnStyle:hover{
@@ -91,14 +100,12 @@ overflow: hidden;
 
 }
 
-.resultsStyle{
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-}
 
 .listStyle{
     list-style: none;
     text-align: center;
+    margin-right: 3em;
+    color: white;
 }
 
 .brewName{
@@ -129,3 +136,66 @@ overflow: hidden;
     transform: translateY(55%);
   }
 
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .homeContentDiv1 > h1 {
+        font-size: 3em;
+    }
+
+    .homeContentDiv1 > p {
+        font-size: 1em;
+        width: 80%;
+    }
+
+    .homeContentDiv1 > button {
+        margin-top: 1em;
+    }
+
+    .formStyle{
+        margin-top: 1em;
+    }
+
+    .label1Style,
+    .input1Style,
+    .submitBtnStyle {
+        font-size: 1em;
+        width: 80%;
+    }
+
+    .listStyle {
+        margin-right: 3em;
+        font-size: 0.8em;
+    }
+}
+
+/* Media query for iPads */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .homeContentDiv1 > h1 {
+        font-size: 5em;
+    }
+
+    .homeContentDiv1 > p {
+        font-size: 1em;
+        width: 80%;
+    }
+
+    .homeContentDiv1 > button {
+        margin-top: 1em;
+    }
+
+    .formStyle{
+        margin-top: 1em;
+    }
+
+    .label1Style,
+    .input1Style,
+    .submitBtnStyle {
+        font-size: 1em;
+        width: 80%;
+    }
+
+    .listStyle {
+        margin-right: 3em;
+        font-size: 0.9em;
+    }
+}

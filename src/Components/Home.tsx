@@ -62,7 +62,6 @@ export const Home: React.FC = () => {
   
           {breweries.length > 0 && (
             <div>
-              <h2 className='resultsStyle'>Results:</h2>
               <ul className='resultsStyle2'>
                 {breweries.map((brewery) => (
                   <li key={brewery.id} className='listStyle'>
